@@ -1,0 +1,77 @@
+site_dir: "site"
+site_url: https://shenweiyan.github.io/MkDocsGLightboxDemo/
+site_name: "MkDocs GLightbox Demo"
+site_description: 'Example MkDocs GLightbox Demo Site'
+
+# Docs 
+docs_dir: "docs"
+
+# Repository
+repo_name: MkDocsGLightboxDemo
+repo_url: https://github.com/shenweiyan/MkDocsGLightboxDemo/
+edit_uri: edit/main/docs/
+site_author: Steven Shum
+
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+  favicon: assets/logo.ico
+  logo: assets/octocat.png
+  font:
+    text: "Microsoft Yahei"
+    code: "Consolas,Courier,courier new,stkaiti,kaiti,simkai,monospace"
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.sections
+    - navigation.path         
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.footer
+  palette:
+    - scheme: default
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Taiwan:
+    - Sea: taiwan/sea.md
+    - Mountain: taiwan/mountain.md
+  - Caption: caption/caption.md
+  - Gallery: gallery/gallery.md
+  - More Flexibility:
+    - Disable by image: flexibility/disable-by-image.md
+    - Disable by page: flexibility/disable-by-page.md
+    - Enable by image: flexibility/disable-by-page-enable-by-image.md
+    - Disable globally but enable by image or page: flexibility/enable-by-image-or-page.md
+    
+markdown_extensions:
+    - admonition
+    - md_in_html
+
+plugins:
+  - glightbox:
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - skip-lightbox
+
+  - search:
+      lang:
+          - en
+          - zh
